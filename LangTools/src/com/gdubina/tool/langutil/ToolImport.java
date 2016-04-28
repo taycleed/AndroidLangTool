@@ -97,7 +97,7 @@ public class ToolImport {
 		iterator.next();//ignore first row;
 		Element pluralsNode = null;
 		Element arraysNode = null;
-		String plurarName = null;
+		String pluralName = null;
 		String arrayName = null;
 
 		while (iterator.hasNext()) {
@@ -121,9 +121,9 @@ public class ToolImport {
 				continue;
 			}
 			
-			int plurarIndex = key.indexOf("#");
+			int pluralIndex = key.indexOf("#");
 			int arrayDotIndex = key.indexOf(".");
-			if(plurarIndex == -1 && arrayDotIndex == -1){//string
+			if(pluralIndex == -1 && arrayDotIndex == -1){//string
 				Cell valueCell = row.getCell(column);
 				if(valueCell == null){
 					addEmptyKeyValue(dom, root, key);
@@ -163,12 +163,12 @@ public class ToolImport {
 				if(valueCell != null){
 					value = valueCell.toString();// value
 				}
-				String plurarNameNew = key.substring(0, plurarIndex);
-				String quantity = key.substring(plurarIndex + 1);
-				if(!plurarNameNew.equals(plurarName)){
-					plurarName = plurarNameNew; 
+				String pluralNameNew = key.substring(0, pluralIndex);
+				String quantity = key.substring(pluralIndex + 1);
+				if(!pluralNameNew.equals(pluralName)){
+					pluralName = pluralNameNew; 
 					pluralsNode = dom.createElement("plurals");
-					pluralsNode.setAttribute("name", plurarName);
+					pluralsNode.setAttribute("name", pluralName);
 				}
 				Element item = dom.createElement("item");
 				item.setAttribute("quantity", quantity);
