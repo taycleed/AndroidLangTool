@@ -1,31 +1,31 @@
 AndroidLangTool
 ===============
 
-Simple tool to export android strings resourses to excel and import them to project after translating.
-It will scan android project and export all strings.xml to excel file. So you will have simple way to prepare translations 
+Simple tool to export Android strings resourses to Excel and import them to project after translating.
+It will scan Android project and export all strings.xml to Excel file. So you will have a simple way to prepare translations. 
 
 The app supports xml comments. 
-missed traslations will have red backforund in xls file.
+Missing translations will have red background in xls file.
 
-To run application execute: `java -jar LangTool.jar`
+To run application, execute: `java -jar LangTool.jar`
 
-Tool has two commands: export to xls and import from xls file
+Tool has two commands: *export* to xls and *import* from xls file
  
 `
 export: -e <project dir> <output file>
 `
 
-**project dir** - path to android project. 
+**project dir** - Path to Android project. 
 
-**output file** - name of excel file
+**output file** - Name of Excel file
 
 
 `
 import: -i <input file>
 `
 
-**input file** - name of excel file for importing to project 
+**input file** - Name of Excel file to import to the project 
 
-link to binary: http://goo.gl/5EaOg
+Link to binary: http://goo.gl/5EaOg
 
-link to eclipse plugin: http://goo.gl/fwEkU
+Link to eclipse plugin: http://goo.gl/fwEkU
